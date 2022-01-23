@@ -1,0 +1,20 @@
+- repeat:
+  - 3
+  - what:
+    - say:
+      - what: Please guess a number
+    - store:
+      - what: input
+      - to: number
+    - ifeq:
+      - val1:
+        - get_store:
+          - from: number
+      - val2: 777
+      - then:
+        - say:
+          - what: That was correct!
+        - break
+      - else:
+        - say:
+          - what: Try again!
